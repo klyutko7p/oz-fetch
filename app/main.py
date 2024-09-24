@@ -35,7 +35,7 @@ def handle_post():
     print(driver.page_source)
     time.sleep(5)
     product_link = driver.current_url
-    product_title = driver.find_element(By.CLASS_NAME, "sm1_27").text
+    product_title = driver.find_element(By.CLASS_NAME, "tsHeadline550Medium").text
     product_price = driver.find_element(By.CLASS_NAME, "rm5_27").text
 
     response_data = {'status': 'success', 'link': f'{product_link}', 'title': f'{product_title}', 'price': f'{product_price}'}

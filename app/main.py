@@ -19,7 +19,14 @@ options.add_argument("--enable-javascript")
 
 def init_webdriver():
     driver = webdriver.Chrome(options=options)
-    stealth(driver, platform="Win32")
+    stealth(driver, 
+        languages=["en-US", "en"],
+        vendor="Google Inc.",
+        platform="Win32",
+        webgl_vendor="Intel Inc.",
+        renderer="Intel Iris OpenGL Engine",
+        fix_hairline=True
+        )
     return driver
     
 print("Браузер успешно открыт")

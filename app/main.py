@@ -32,8 +32,9 @@ def handle_post():
     url = request.json['url']
     print(url)
     driver.get(url)
-    time.sleep(5)
+    time.sleep(2)
     product_link = driver.current_url
+    print(product_link)
 
     response_data = {'status': 'success', 'link': f'{product_link}'}
     return jsonify(response_data)

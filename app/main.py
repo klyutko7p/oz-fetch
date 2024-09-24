@@ -39,7 +39,7 @@ def handle_post():
     url = request.json['url']
     print(url)
     driver.get(url)
-    time.sleep(4)
+    time.sleep(5)
     print(driver.page_source)
     product_link = driver.current_url
     print(product_link)

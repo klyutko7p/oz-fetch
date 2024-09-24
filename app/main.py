@@ -32,7 +32,6 @@ def handle_post():
     url = request.json['url']
     print(url)
     driver.get(url)
-    print(driver.page_source)
     time.sleep(5)
     product_link = driver.current_url
     product_title = driver.find_element(By.CLASS_NAME, "tsHeadline550Medium").text
